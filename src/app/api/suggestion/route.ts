@@ -3,7 +3,8 @@ export async function GET(request: Request) {
   console.log("GET");
 
   const response = await fetch(
-    "http://localhost:7071/api/getChatGPTSuggestion",
+    // "http://localhost:7071/api/getChatGPTSuggestion",
+    "https://hdariodevtest.azurewebsites.net/api/getchatgptsuggestion",
     {
       cache: "no-store",
     }

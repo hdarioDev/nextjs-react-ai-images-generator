@@ -33,14 +33,16 @@ app.http("generateImage", {
 
     const containerClient = blobServiceClient.getContainerClient(containerName);
 
-    const timestamp = Date.now();
-    const blobName = `${timestamp}.png`;
+    const timestamp = new Date().getTime();
+    const blobName = `${prompt}_${timestamp}.png`;
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
     try {
       await blockBlobClient.uploadData(arrayBuffer);
       console.log("File uploaded successfully");
     } catch (error) {
-      console.log("Error uploading file ", error);
+      console.log("Error uploading file ", error.message);
     }
+
+    return { body: "Successfully Uploaded Image" };
   },
 });

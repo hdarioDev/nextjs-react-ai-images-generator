@@ -1,9 +1,10 @@
+import Images from "@/components/Images";
 import React from "react";
 
 const page = () => {
   return (
-    <main>
-      <h1 className="text-red-">Hello World</h1>
+    <main className="mx-0 md:mx-10">
+      <Images />
     </main>
   );
 };

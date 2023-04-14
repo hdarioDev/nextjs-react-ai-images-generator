@@ -3,24 +3,31 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex p-5 justify-between sticky top-0 bg-white z-50 shadow-md">
+    <header className="flex p-3 md:p-5  bg-violet-500 justify-between sticky top-0 text-white z-50 shadow-md">
       <div className="flex space-x-2 items-center">
-        <Image alt="" height={60} width={60} src="/logo.png" />
+        <Image alt="" height={40} width={40} src="/logo.png" />
         <div>
-          <h1 className="font-bold">
-            The hdariodev <span className="text-violet-600">AI</span> Image
-            Generator
+          <h1 className="font-bold md:text-xl">
+            <span className="text-black">AI</span> Image Generator
           </h1>
-          <h2 className="text-xs">
-            Powered by DALL-E 2, Chat GPT & Microsoft Azure
-          </h2>
+          <h2 className="text-xs md:text-sm">DALL-E 2, ChatGPT, Azure</h2>
         </div>
       </div>
-      <div className="flex text-xs md:text-base divide-x items-center text-gray-500">
-        <Link href="hdariodev.com" className="px-2 font-light text-right">
-          Visit my site
+      <div className="flex text-xs md:text-sm divide-x items-center text-gray-100">
+        <Link
+          href="https://hdariodev.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="px-2 font-light text-right"
+        >
+          My site
         </Link>
-        <Link href="https://github.com/hdarioDev" className="px-2 font-light">
+        <Link
+          href="https://github.com/hdarioDev"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="px-2 font-light"
+        >
           Github
         </Link>
       </div>

@@ -7,6 +7,7 @@ const {
 
 const accountName = process.env.accountName || "accountName";
 const accountKey = process.env.accountKey || "accountKey";
+
 const containerName = "images";
 
 const sharedKeyCredential = new StorageSharedKeyCredential(
